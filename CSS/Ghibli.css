@@ -230,8 +230,24 @@ header .wrapper nav .links a:hover {
     margin: 20px auto 70px;
   }
 }
+.landing .wrapper .content .text a:nth-of-type(2) {
+  display: flex;
+  justify-content: flex-end;
+  margin: 10px 30px auto 0;
+  text-decoration: none;
+  font-size: 0.9em;
+  color: white;
+  text-shadow: 2px 2px 2px black;
+}
+.landing .wrapper .content .text a:nth-of-type(2):hover i {
+  transform: translateX(5px);
+}
+.landing .wrapper .content .text a:nth-of-type(2) i {
+  font-size: 0.8em;
+  margin: 0 0 0 8px;
+  transition: 0.3s;
+}
 .landing .wrapper .content .cards {
-  flex-basis: 50%;
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(110px, 1fr));
   place-items: center;
@@ -246,7 +262,6 @@ header .wrapper nav .links a:hover {
 }
 .landing .wrapper .content .cards img:hover {
   box-shadow: 4px 4px 6px rgba(0, 0, 0, 0.9);
-  transform: translateX(10px);
 }
 @media (width <= 797px) {
   .landing .wrapper .content .cards img:nth-child(4) {
