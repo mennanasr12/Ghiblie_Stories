@@ -104,11 +104,13 @@ header .wrapper nav .links {
   padding: 10px 0;
   background: rgba(0, 0, 0, 0.1);
   opacity: 0;
+  z-index: -1;
   border-radius: 4px;
   transition: 0.3s;
 }
 header .wrapper nav .bars:hover + .links {
   opacity: 1;
+  z-index: 1;
 }
 @media (width <= 991px) {
   header .wrapper nav .links {
