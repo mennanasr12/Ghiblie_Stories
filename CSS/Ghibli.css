@@ -103,9 +103,9 @@ header .wrapper nav .links {
   left: 45%;
   padding: 10px 0;
   background: rgba(0, 0, 0, 0.1);
+  border-radius: 4px;
   opacity: 0;
   z-index: -1;
-  border-radius: 4px;
   transition: 0.3s;
 }
 header .wrapper nav .bars:hover + .links {
@@ -127,7 +127,6 @@ header .wrapper nav .bars:hover + .links {
 header .wrapper nav .links a {
   display: block;
   text-decoration: none;
-  width: 100%;
   font-size: 1.1rem;
   color: var(--main-color);
   padding: 8px 25px;
