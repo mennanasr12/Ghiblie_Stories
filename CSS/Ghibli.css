@@ -140,7 +140,7 @@ header .wrapper nav .links a:hover {
 /* start landing  */
 .landing {
   position: relative;
-  min-height: 100vh;
+  height: 100vh;
   background-image: url(../Images/landing.webp);
   background-size: cover;
 }
@@ -168,25 +168,30 @@ header .wrapper nav .links a:hover {
   display: flex;
   flex-direction: column;
 }
-
-.landing .wrapper .content .text :not(p, a) {
+@media (width <= 797px) {
+  .landing .wrapper .content {
+    margin: -130px 0 0 0;
+  }
+}
+.landing .wrapper .content .text .heading > h1 {
   color: white;
   line-height: 1.4;
   word-spacing: 0.4em;
   letter-spacing: 0.2em;
   font-size: 3.2em;
+  margin: 0;
   text-shadow: 4px 1px 6px black;
 }
 @media (width <= 797px) {
-  .landing .wrapper .content .text :not(p, a) {
+  .landing .wrapper .content .text .heading > h1 {
     line-height: 2;
     font-size: 1.7em;
   }
 }
-.landing .wrapper .content .text h1:nth-child(2) {
+.landing .wrapper .content .text .heading > h1:nth-child(2) {
   margin: -15px 0 0 80px;
 }
-.landing .wrapper .content .text h1:nth-child(3) {
+.landing .wrapper .content .text .heading > h1:nth-child(3) {
   width: fit-content;
   margin: -15px auto 0;
 }
@@ -201,6 +206,7 @@ header .wrapper nav .links a:hover {
 @media (width <= 797px) {
   .landing .wrapper .content .text p {
     margin: 0 auto;
+    text-align: center;
   }
 }
 .landing .wrapper .content .text a:first-of-type {
@@ -220,7 +226,7 @@ header .wrapper nav .links a:hover {
 }
 @media (width <= 797px) {
   .landing .wrapper .content .text a:first-of-type {
-    margin: 0 auto 20px;
+    margin: 20px auto 70px;
   }
 }
 .landing .wrapper .content .cards {
@@ -228,16 +234,24 @@ header .wrapper nav .links a:hover {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(110px, 1fr));
   place-items: center;
-  gap: 20px;
 }
 .landing .wrapper .content .cards img {
   max-width: 110px;
   max-height: 150px;
   border-radius: 5px;
-  box-shadow: 4px 4px 6px black;
+  box-shadow: 4px 4px 6px rgba(0, 0, 0, 0.6);
   cursor: pointer;
+  transition: 0.3s;
 }
-
+.landing .wrapper .content .cards img:hover {
+  box-shadow: 4px 4px 6px rgba(0, 0, 0, 0.9);
+  transform: translateX(10px);
+}
+@media (width <= 797px) {
+  .landing .wrapper .content .cards img:nth-child(4) {
+    display: none;
+  }
+}
 .landing .wrapper .preview {
   flex-basis: 25%;
   display: flex;
