@@ -185,7 +185,7 @@ header .wrapper nav .links a:hover {
 }
 @media (width <= 797px) {
   .landing .wrapper .main-content .heading > h1 {
-    line-height: 2;
+    line-height: 1.7;
     font-size: 1.9em;
   }
 }
@@ -236,7 +236,7 @@ header .wrapper nav .links a:hover {
   padding: 10px 40px;
   border-radius: 20px;
   background: rgb(53, 116, 54, 0.5);
-  box-shadow: 1px 3px 4px black;
+  box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.7);
   transition: 0.3s;
 }
 
@@ -255,7 +255,7 @@ header .wrapper nav .links a:hover {
   font-size: 1.2em;
   letter-spacing: 0.1em;
   color: white;
-  text-shadow: 2px 2px 2px black;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
   align-self: flex-end;
 }
 @media (width <= 797px) {
@@ -283,7 +283,7 @@ header .wrapper nav .links a:hover {
   width: 123px;
   height: 170px;
   border-radius: 8px;
-  box-shadow: 4px 4px 6px rgba(0, 0, 0, 0.8);
+  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
   cursor: pointer;
   transition: 0.3s;
 }
@@ -295,7 +295,7 @@ header .wrapper nav .links a:hover {
 }
 
 .landing .wrapper .main-content .stories .cover img:hover {
-  box-shadow: 4px 4px 6px rgba(0, 0, 0, 0.9);
+  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.9);
 }
 
 @media (width <= 797px) {
@@ -320,7 +320,7 @@ header .wrapper nav .links a:hover {
   width: 100%;
   max-height: 60%;
   border-radius: 8px;
-  box-shadow: 2px 2px 9px black;
+  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
   cursor: pointer;
 }
 
@@ -330,6 +330,7 @@ header .wrapper nav .links a:hover {
   font-size: 0.9em;
   line-height: 1;
   letter-spacing: 0.1em;
+  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.5);
   padding: 10px;
   border-radius: 5px;
   background-color: rgba(0, 0, 0, 0.2);
