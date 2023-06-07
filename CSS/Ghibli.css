@@ -13,9 +13,7 @@
   -moz-box-sizing: border-box;
   box-sizing: border-box;
 }
-html {
-  scroll-behavior: smooth;
-}
+
 body {
   font-family: "Lakki Reddy", cursive;
 }
@@ -39,7 +37,7 @@ li {
 }
 @media (width >= 1200px) {
   .wrapper {
-    width: 1070px;
+    width: 1170px;
   }
 }
 /* end global rules  */
@@ -49,7 +47,7 @@ header {
   position: absolute;
   left: 0;
   width: 100%;
-  z-index: 2;
+  z-index: 1;
 }
 
 header .wrapper {
@@ -112,15 +110,16 @@ header .wrapper nav .bars:hover + .links {
   opacity: 1;
   z-index: 1;
 }
-@media (width <= 991px) {
-  header .wrapper nav .links {
-    left: 20%;
-  }
-}
 @media (width <= 797px) {
   header .wrapper nav .links {
     display: block;
     top: 20px;
+  }
+}
+
+@media (width <= 991px) {
+  header .wrapper nav .links {
+    left: 20%;
   }
 }
 
@@ -134,7 +133,6 @@ header .wrapper nav .links a {
 }
 header .wrapper nav .links a:hover {
   color: var(--secondary-color);
-  padding-top: 0;
 }
 /* end header  */
 
@@ -147,133 +145,140 @@ header .wrapper nav .links a:hover {
 }
 
 .landing .wrapper {
-  display: flex;
   position: absolute;
   top: 90px;
   left: 0;
   right: 0;
   bottom: 0;
+  display: grid;
+  grid-template-areas: "main-content main-content preview";
+  grid-template-columns: repeat(2, 1fr) 400px;
+  gap: 20px;
 }
-.landing .wrapper .content-holder {
-  flex-basis: 100%;
-  display: flex;
-  justify-content: space-between;
-}
-@media (width <= 797px) {
-  .landing .wrapper .content-holder {
+@media (width <= 991px) {
+  .landing .wrapper {
+    grid-template-areas: "main-content";
+    display: flex;
     justify-content: center;
     align-items: center;
   }
 }
-.landing .wrapper .content {
+.landing .wrapper .main-content {
+  grid-area: main-content;
   display: flex;
   flex-direction: column;
+  justify-content: center;
 }
-@media (width <= 797px) {
-  .landing .wrapper .content {
-    margin: -130px 0 0 0;
-  }
-}
-.landing .wrapper .content .text .heading > h1 {
+
+.landing .wrapper .main-content .heading > h1 {
   color: white;
-  line-height: 1.4;
+  margin: 0;
   word-spacing: 0.4em;
   letter-spacing: 0.2em;
-  font-size: 3.2em;
-  margin: 0;
+  font-size: 3.1em;
   text-shadow: 4px 1px 6px black;
 }
 @media (width <= 797px) {
-  .landing .wrapper .content .text .heading > h1 {
+  .landing .wrapper .main-content .heading > h1 {
     line-height: 2;
-    font-size: 1.7em;
+    font-size: 1.8em;
   }
 }
-.landing .wrapper .content .text .heading > h1:nth-child(2) {
-  margin: -15px 0 0 80px;
+.landing .wrapper .main-content .heading > h1:nth-child(2) {
+  margin: 0 0 0 80px;
 }
-.landing .wrapper .content .text .heading > h1:nth-child(3) {
+.landing .wrapper .main-content .heading > h1:nth-child(3) {
   width: fit-content;
-  margin: -15px auto 0;
+  margin: 0 auto;
 }
-.landing .wrapper .content .text p {
+.landing .wrapper .main-content .suggest {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.landing .wrapper .main-content .suggest p {
+  max-width: 300px;
   color: white;
-  font-size: 1.3em;
-  width: 250px;
-  margin: 0 0 15px;
+  font-size: 1.1em;
   line-height: 1.5;
   opacity: 0.8;
 }
 @media (width <= 797px) {
-  .landing .wrapper .content .text p {
-    margin: 0 auto;
-    text-align: center;
+  .landing .wrapper .main-content .suggest {
+    align-items: center;
+    justify-content: center;
   }
 }
-.landing .wrapper .content .text a:first-of-type {
+.landing .wrapper .content .text p {
+  text-align: center;
+}
+.landing .wrapper a:not(.link) {
   display: block;
   width: fit-content;
+  text-decoration: none;
+  color: white;
   padding: 10px 40px;
-  margin: 0 0 15px 0;
   border-radius: 20px;
   background: rgb(53, 116, 54, 0.5);
   box-shadow: 1px 4px 4px black;
-  text-decoration: none;
-  color: white;
   transition: 0.3s;
 }
-.landing .wrapper .content .text a:first-of-type:hover {
+.landing .wrapper a:not(.link):hover {
   background: rgb(53, 116, 54, 0.8);
 }
-@media (width <= 797px) {
-  .landing .wrapper .content .text a:first-of-type {
-    margin: 20px auto 70px;
-  }
-}
-.landing .wrapper .content .text a:nth-of-type(2) {
+
+.landing .wrapper .main-content .stories {
   display: flex;
-  justify-content: flex-end;
-  margin: 10px 155px auto 0;
+  flex-direction: column;
+}
+.landing .wrapper .main-content .stories .link {
   text-decoration: none;
   font-size: 0.9em;
   color: white;
   text-shadow: 2px 2px 2px black;
+  align-self: flex-end;
 }
-.landing .wrapper .content .text a:nth-of-type(2):hover i {
+
+.landing .wrapper .main-content .stories .link:hover i {
   transform: translateX(5px);
 }
-.landing .wrapper .content .text a:nth-of-type(2) i {
+
+.landing .wrapper .main-content .stories .link i {
   font-size: 0.8em;
   margin: 0 0 0 8px;
   transition: 0.3s;
 }
-.landing .wrapper .content .cards {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(110px, 1fr));
-  place-items: center;
+.landing .wrapper .main-content .stories .cover {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 30px;
 }
-.landing .wrapper .content .cards img {
-  max-width: 110px;
+.landing .wrapper .main-content .stories .cover img {
+  flex-basis: 25%;
   max-height: 150px;
   border-radius: 5px;
   box-shadow: 4px 4px 6px rgba(0, 0, 0, 0.6);
   cursor: pointer;
   transition: 0.3s;
 }
-.landing .wrapper .content .cards img:hover {
+.landing .wrapper .main-content .stories .cover img:hover {
   box-shadow: 4px 4px 6px rgba(0, 0, 0, 0.9);
 }
+
 @media (width <= 797px) {
-  .landing .wrapper .content .cards img:nth-child(4) {
+  .landing .wrapper .main-content .stories .cover img:last-child {
     display: none;
   }
 }
+
 .landing .wrapper .preview {
-  flex-basis: 25%;
+  grid-area: preview;
   display: flex;
   flex-direction: column;
-  justify-content: space-around;
+  justify-content: center;
   align-items: center;
+  gap: 20px;
 }
 @media (width <= 991px) {
   .landing .wrapper .preview {
@@ -281,8 +286,8 @@ header .wrapper nav .links a:hover {
   }
 }
 .landing .wrapper .preview img {
-  width: 75%;
-  max-height: 50%;
+  width: 60%;
+  max-height: 55%;
   border-radius: 5px;
   box-shadow: 1px 2px 8px black;
   cursor: pointer;
@@ -290,24 +295,10 @@ header .wrapper nav .links a:hover {
 
 .landing .wrapper .preview p {
   color: white;
-  font-size: 1.2em;
+  width: 60%;
+  font-size: 0.9em;
   line-height: 1.3;
   padding: 10px;
   border-radius: 5px;
   background-color: rgba(0, 0, 0, 0.2);
 }
-.landing .wrapper .preview a {
-  display: block;
-  width: fit-content;
-  padding: 10px 40px;
-  border-radius: 20px;
-  background: rgb(53, 116, 54, 0.5);
-  box-shadow: 1px 4px 4px black;
-  text-decoration: none;
-  color: white;
-  transition: 0.3s;
-}
-.landing .wrapper .preview a:hover {
-  background: rgb(53, 116, 54, 0.8);
-}
-/* end landing  */
