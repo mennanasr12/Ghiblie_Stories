@@ -182,7 +182,7 @@ header .wrapper nav .links a:hover {
   color: white;
   margin: 0;
   font-family: "Lakki Reddy", cursive;
-  word-spacing: 0.4em;
+  word-spacing: 0.2em;
   letter-spacing: 0.15em;
   font-size: 2.8em;
   text-shadow: 4px 1px 6px black;
@@ -293,7 +293,7 @@ header .wrapper nav .links a:hover {
 }
 @media (width <= 1199px) {
   .landing .wrapper .main-content .stories .cover img {
-    width: 100px;
+    width: 95px;
     height: 130px;
   }
 }
