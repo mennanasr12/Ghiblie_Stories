@@ -98,8 +98,9 @@ header .wrapper nav span:last-child {
 header .wrapper nav .links {
   position: absolute;
   display: flex;
-  top: -20px;
-  left: 45%;
+  top: 50%;
+  transform: translatey(-50%);
+  left: 40%;
   padding: 10px 0;
   background: rgba(0, 0, 0, 0.1);
   border-radius: 4px;
@@ -111,16 +112,11 @@ header .wrapper nav .bars:hover + .links {
   opacity: 1;
   z-index: 1;
 }
-@media (width <= 797px) {
+@media (width < 730px) {
   header .wrapper nav .links {
     display: block;
-    top: 20px;
-  }
-}
-
-@media (width <= 991px) {
-  header .wrapper nav .links {
-    left: 20%;
+    top: calc(100% + 1px);
+    transform: translatey(0);
   }
 }
 
