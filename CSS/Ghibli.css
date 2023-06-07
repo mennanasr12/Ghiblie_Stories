@@ -183,7 +183,7 @@ header .wrapper nav .links a:hover {
   font-size: 2.8em;
   text-shadow: 4px 1px 6px black;
 }
-@media (width <= 797px) {
+@media (width <= 767px) {
   .landing .wrapper .main-content .heading > h1 {
     line-height: 1.7;
     font-size: 1.9em;
@@ -216,7 +216,7 @@ header .wrapper nav .links a:hover {
   opacity: 0.9;
 }
 
-@media (width <= 797px) {
+@media (width <= 767px) {
   .landing .wrapper .main-content .suggest {
     align-items: center;
     justify-content: center;
@@ -258,7 +258,7 @@ header .wrapper nav .links a:hover {
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
   align-self: flex-end;
 }
-@media (width <= 797px) {
+@media (width <= 767px) {
   .landing .wrapper .main-content .stories .link {
     align-self: center;
   }
@@ -298,7 +298,7 @@ header .wrapper nav .links a:hover {
   box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.9);
 }
 
-@media (width <= 797px) {
+@media (width <= 767px) {
   .landing .wrapper .main-content .stories .cover img:last-child {
     display: none;
   }
