@@ -155,14 +155,7 @@ header .wrapper nav .links a:hover {
   grid-template-columns: 1fr 250px;
   gap: 140px;
 }
-@media (width <= 991px) {
-  .landing .wrapper {
-    grid-template-areas: "main-content";
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-}
+
 .landing .wrapper .main-content {
   grid-area: main-content;
   display: flex;
@@ -312,6 +305,13 @@ header .wrapper nav .links a:hover {
   gap: 20px;
 }
 @media (width <= 991px) {
+  .landing .wrapper {
+    grid-template-areas: "main-content";
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
   .landing .wrapper .preview {
     display: none;
   }
